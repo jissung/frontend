@@ -11,7 +11,7 @@ https://www.w3schools.com/ - w3c 듀토리얼
 ## 클라이언트 서버 모델
 
 클라이언트 -- 인터넷 -- 서버   
-![Alt text](https://ko.wikipedia.org/wiki/%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%96%B8%ED%8A%B8_%EC%84%9C%EB%B2%84_%EB%AA%A8%EB%8D%B8#/media/%ED%8C%8C%EC%9D%BC:Client-server-model.svg)
+![Alt text](/D:\jisung\img)
 
 
 > 클라이언트 : 사용자가 사용하는 디바이스나 실행 소프트웨어를 의미한다.   (ex.스마트폰, PC, 웹 브라우저, application 등..) - 프론트 엔드
