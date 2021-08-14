@@ -68,5 +68,9 @@ https://www.w3schools.com/html/html_elements.asp
 > h1 : body와의 관계에서는 자식요소, html과의 관계에서는 자손요소라고 한다.
 
 
+### HTML Attribute
+
+https://www.w3schools.com/html/html_attributes.asp
+
 
 
