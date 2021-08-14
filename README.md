@@ -1,6 +1,6 @@
 # frontend
 
-## 참고 링크
+## 참고 
 
 https://github.com/ - 개발 협업 도구 
 
