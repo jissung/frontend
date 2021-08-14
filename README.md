@@ -90,3 +90,9 @@ https://www.w3schools.com/html/html_paragraphs.asp
 https://www.w3schools.com/html/html_links.asp
 
 a 태그 : anchor(닻),이란 의미로 하이퍼링크를 연결해주는 태그이다.
+ - a 태그에서 href 속성(attribute)를 꼭 사용 해야한다. 
+
+사용예제
+```
+<a href="url">link text</a>
+```
