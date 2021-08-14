@@ -11,7 +11,7 @@ https://www.w3schools.com/ - w3c 듀토리얼
 ## 클라이언트 서버 모델
 
 클라이언트 -- 인터넷 -- 서버   
-<a href="/D:\jisung\img\1920px-Client-server-model.svg.png"> </a>
+<img src="https://ko.wikipedia.org/wiki/%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%96%B8%ED%8A%B8_%EC%84%9C%EB%B2%84_%EB%AA%A8%EB%8D%B8#/media/%ED%8C%8C%EC%9D%BC:Client-server-model.svg">
 
 
 > 클라이언트 : 사용자가 사용하는 디바이스나 실행 소프트웨어를 의미한다.   (ex.스마트폰, PC, 웹 브라우저, application 등..) - 프론트 엔드
@@ -96,3 +96,17 @@ a 태그 : anchor(닻),이란 의미로 하이퍼링크를 연결해주는 태�
 ```
 <a href="url">link text</a>
 ```
+
+> URL (Uniform Resource Locator) : 파일식별자 (위치 표시), 가장 넓은 의미의 인터넷 주소를 말한다. 
+> 인터넷 주소
+> - IP (Internet Protocol) : 숫자로 구성된 주소(ex. 192.168.0.1)
+> - Domain Name : ex. www.naver.com / DNS (Domain Name Server)로 도메인 주소를 IP주소 변경한다.
+> - ex) blog.naver.com/blog/12345 => URL 
+
+> URL 종류 
+> 절대(Absolute) URL
+> 상대(Relative) URL 
+
+### HTML File 경로
+
+
