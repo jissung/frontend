@@ -139,7 +139,7 @@ html table jenerator : https://www.tablesgenerator.com/html_tables
 
 https://www.w3schools.com/html/html_images.asp
 
-alt : alternative(변경, 대체) 
+> alt : alternative(변경, 대체) 
 
 ### HTML Video
 
