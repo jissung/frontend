@@ -123,3 +123,16 @@ https://www.w3schools.com/html/html_filepaths.asp
 - ex) 강남역 11번 출구에서 3분 거리 대호빌딩
 - 출발지 위치를 기준으로 표시 (상세경로 : /blog/image.jpg || image.jpg) 
 - 위치에 따라 사용되기 때문에 주소체계가 달라질 수 있다. 
+
+
+### HTML List
+https://www.w3schools.com/html/html_lists.asp
+
+> 중첩목록(Nested List) : 포함 관계로 되어 있는 목록
+
+### HTML Table
+https://www.w3schools.com/html/html_tables.asp
+
+html table jenerator : https://www.tablesgenerator.com/html_tables
+
+
