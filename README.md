@@ -150,3 +150,29 @@ https://www.w3schools.com/html/html5_video.asp
 ### HTML Youtube
 
 https://www.w3schools.com/html/html_youtube.asp
+
+### HTML Block & Inline
+
+https://www.w3schools.com/html/html_blocks.asp
+
+> 포함관계
+>
+> - 블럭요소에는 다른 블럭요소, 인라인 요소, 콘텐츠 포함 가능
+> - 인라인 요소 : 다른 인라인 요소, 콘텐츠 포함 가능, 블럭요소는 포함 불가능
+> - 예외 : a - 인라인 요소이지만 블럭 요소를 포함 가능
+
+### HTML ID & Class
+
+https://www.w3schools.com/html/html_id.asp
+
+https://www.w3schools.com/html/html_classes.asp
+
+> ID attribute
+
+> - id 속성으로 만들어지는 이름은 한 HTML 문서 내에서 고유해야 한다. (한번만 사용 가능-논리적 개념)
+> - id는 한 대상의 HTML Element의 하나의 이름만 지정할 수 있다. (물리적 오류 발생함.)
+
+> Class attribute
+
+> - class로 붙여주는 이름은 한 HTML 문서 내에서 여러번 중복 사용이 가능하다.
+> - class는 한 대상의 HTML Element의 여러개의 이름을 지정할 수 있다.
