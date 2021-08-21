@@ -135,4 +135,17 @@ https://www.w3schools.com/html/html_tables.asp
 
 html table jenerator : https://www.tablesgenerator.com/html_tables
 
+### HTML Images
+
+https://www.w3schools.com/html/html_images.asp
+
+alt : alternative(변경, 대체) 
+
+### HTML Video
+
+https://www.w3schools.com/html/html5_video.asp
+
+### HTML Youtube
+
+https://www.w3schools.com/html/html_youtube.asp
 
