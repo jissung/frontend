@@ -19,3 +19,10 @@
  
 
 ![image](https://user-images.githubusercontent.com/88914377/131202156-f30a2b51-4b98-49ff-8275-768dcc16bff9.png)
+
+# CSS Selector
+
+## 1) Element selector
+## 2) Id selector 
+## 3) Class Selector 
+> - CSS 방법론 - oocss(Object oriented CSS)이론 적용 
