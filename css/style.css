@@ -1,0 +1,195 @@
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* font-family: "Montserrat", sans-serif; */
+/* font-family: "Nunito", sans-serif; */
+/* font-family: "Noto Sans KR", sans-serif; */
+
+.gnb-Link {
+  font-family: "montserrat", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  color: #191919;
+  text-decoration: none;
+}
+.gnb-Link:hover {
+  color: #10c9c3;
+}
+
+.logo {
+  text-align: left;
+}
+.section-heading {
+  text-align: center;
+  line-height: 1.6;
+  font-family: "Montserrat", sans-serif;
+  font-size: 38px;
+  font-weight: 500;
+  margin-bottom: 35px;
+}
+.section01 {
+  height: 320px;
+  background: #f6f6f6;
+  padding-top: 100px;
+  box-sizing: border-box;
+}
+.section-paragraph {
+  text-align: center;
+  line-height: 1.6;
+  font-family: "Noto Sans KR", sans-serif;
+  padding: 0 200px;
+}
+ul {
+  text-align: right;
+}
+.section02 {
+  height: 900px;
+}
+
+.figure {
+  width: 340px;
+  height: 300px;
+}
+
+.figure-img {
+  width: 340px;
+  height: 300px;
+}
+.figure-video {
+  width: 340px;
+  height: 300px;
+}
+
+.footer {
+  background-color: #141414;
+  color: #ffffff;
+}

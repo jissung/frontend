@@ -155,17 +155,11 @@ https://www.w3schools.com/html/html_youtube.asp
 
 https://www.w3schools.com/html/html_blocks.asp
 
-> 영역의 특성
-
->  - 블럭요소 : 가로길이 - 부모요소에 채워짐 / 세로길이 - 자식요소에 맞춰짐
->  - 인라인 요소 : 가로길이와 세로길이 모두 자식요소에 맞춰짐.
-
 > 포함관계
 >
 > - 블럭요소에는 다른 블럭요소, 인라인 요소, 콘텐츠 포함 가능
 > - 인라인 요소 : 다른 인라인 요소, 콘텐츠 포함 가능, 블럭요소는 포함 불가능
 > - 예외 : a - 인라인 요소이지만 블럭 요소를 포함 가능
-
 
 ### HTML ID & Class
 
@@ -173,17 +167,114 @@ https://www.w3schools.com/html/html_id.asp
 
 https://www.w3schools.com/html/html_classes.asp
 
-> ID attribute  
+> ID attribute
 
 > - id 속성으로 만들어지는 이름은 한 HTML 문서 내에서 고유해야 한다. (한번만 사용 가능-논리적 개념)
 > - id는 한 대상의 HTML Element의 하나의 이름만 지정할 수 있다. (물리적 오류 발생함.)
-> - 데이터와 표시하는 것과 관련해서 많이 사용한다. 
 
 > Class attribute
 
 > - class로 붙여주는 이름은 한 HTML 문서 내에서 여러번 중복 사용이 가능하다.
-> - class는 한 대상의 HTML Element의 여러개의 이름을 지정할 수 있다. (이름 사용에 유연하다.)
+> - class는 한 대상의 HTML Element의 여러개의 이름을 지정할 수 있다.
 
+### CSS 상속
 
+> 부모요소에 적용된 CSS속성이 자식요소에 적용되는 것을 상속이라고 한다.
 
+### CSS Text
 
+https://www.w3schools.com/css/css_text.asp
+
+> - color
+> - Aligment
+> - Decoration
+> - Transformation
+> - Spacing
+
+### CSS Font
+
+https://www.w3schools.com/css/css_font.asp
+
+> 웹에서 사용하는 폰트는 브라우저에서 랜더링 되기 때문에 기존에는 사용자 PC에 설치되어 있는 폰트를 사용하게 되는데 사용자 PC에 설치된 폰트를 찾지 않고 서버에 폰트를 저장해 사용하는 기술이 개발되었는데 그것을 웹 폰트 방식이라고 한다.
+
+> 웹 폰트 서비스 (web font)
+>
+> - 구글 폰트(영문/한글) : https://fonts.google.com/
+> - 눈누 폰트(한글) : https://noonnu.cc/
+
+> font-faily
+>
+> - 항상 폰트 목록 끝에 기본 폰트 이름을 입력해야 된다.
+> - 고딕 : sans-serif / 명조 : serif
+
+> font size
+
+> font style
+>
+> - italic
+
+> font weight
+>
+> - 100, 200, 300 .... : 숫자로 표시
+
+### BOX Model
+
+https://www.w3schools.com/css/css_boxmodel.asp
+
+> - content(width,height) : 콘텐츠의 너비 또는 높이
+> - padding : 안쪽 여백
+> - border : 테두리
+> - margin : 바깥 여백
+
+### width / height
+
+> - 블럭 요소의 가로길이/세로길이를 적용 시
+> - auto : 요소의 기본 특성을 따라 감 / defalut 값 : 적용하지 않은 상태와 같음
+> - px : px 값으로 고정
+> - % : 부모요소를 기본으로 특정 비율만큼 설정
+> - 인라인 요소에 가로길이/세로길이는 적용되지 않음.
+
+### padding
+
+> - padding-top : / padding-right / padding-bottom / padding-left
+> - padding : 1opx, 20px, 30px, 40px;
+> - padding : 10px, 20px;
+> - padding : 10px
+
+### margin
+
+<!-- 박스가 상하대칭 되어 있을때 그 사이 마진이 한쪽만 적용되는 현상을
+마진겹침이라고 한다. 두 박스 모두 마진 적용하지 않고 한 쪽에만 마진을 적용한다. -->
+
+### border
+
+> border:1px solid red;
+>
+> border-top / border-right / border-bottom / border-left
+
+### Background color
+
+https://www.w3schools.com/css/css_background.asp
+
+> background-color
+>
+> background-image:url()
+
+### color 표현 방식
+
+> RGB : Red Green Blue - 가산 혼합 (색을 섞을수록 밝음)
+>
+> - 스크린에서 color 표현할 때 사용한다.
+>
+> CMYK : Cyan Magenta Yellow Black - 감산 혼합 (색을 섞을수록 어두어짐)
+>
+> - 프린터에서 color 표현할 때 사용하는 방식이다.
+
+> color 코드 값
+>
+> - 10진수 표현 : RGB(255, 255, 255)
+> - 16진수 표현 : #1a9cf0
+
+### box-sizing
+
+> box-sizing:border-box -> width/height가 박스 전체 길이가 됨.
