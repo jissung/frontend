@@ -173,12 +173,13 @@ https://www.w3schools.com/html/html_id.asp
 
 https://www.w3schools.com/html/html_classes.asp
 
-> ID attribute
+> ID attribute  
 
 > - id 속성으로 만들어지는 이름은 한 HTML 문서 내에서 고유해야 한다. (한번만 사용 가능-논리적 개념)
 > - id는 한 대상의 HTML Element의 하나의 이름만 지정할 수 있다. (물리적 오류 발생함.)
+> - 데이터와 표시하는 것과 관련해서 많이 사용한다. 
 
 > Class attribute
 
 > - class로 붙여주는 이름은 한 HTML 문서 내에서 여러번 중복 사용이 가능하다.
-> - class는 한 대상의 HTML Element의 여러개의 이름을 지정할 수 있다.
+> - class는 한 대상의 HTML Element의 여러개의 이름을 지정할 수 있다. (이름 사용에 유연하다.)
