@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script>
+      let a = -1;
+      let b = 3;
+      // if 구문
+      if (a > 3) {
+        console.log("참 입니다.");
+      }
+
+      if (a > 3 && b > 3) {
+        console.log("&& 참");
+      } else {
+        console.log("&& 거짓");
+      }
+
+      if (a - 1) {
+        console.log("a는 0이 아닙니다."); // 0 이외 : true
+      } else {
+        console.log("a는 0입니다."); // 0이면 false
+      }
+
+      if (b > 5) {
+        console.log("5보다 큼");
+      } else if (b > 4) {
+        console.log("4보다 큼");
+      } else if (b == 3) {
+        console.log("3과 같거나 작음");
+      } else {
+        console.log("3보다 작음");
+      }
+
+      // switch
+      // let day = "";
+
+      // switch (new Date().getDay()) {
+      //   case 0:
+      //     day = "일";
+      //     break;
+      //   case 1:
+      //     day = "월";
+      //     break;
+      //   case 2:
+      //     day = "화";
+      //     break;
+      //   case 3:
+      //     day = "수";
+      //     break;
+      //   case 4:
+      //     day = "목";
+      //     break;
+      //   case 5:
+      //     day = "금";
+      //     break;
+      //   case 6:
+      //     day = "토";
+      //     break;
+      // }
+      // console.log(day);
+
+      // if문 사용한 요일 표시
+      let today = new Date().getDay();
+      let day = "";
+      //let today = 6;
+
+      if (today === 0) {
+        day = "일";
+      } else if (today === 1) {
+        day = "월";
+      } else if (today === 2) {
+        day = "화";
+      } else if (today === 3) {
+        day = "수";
+      } else if (today === 4) {
+        day = "목";
+      } else if (today === 5) {
+        day = "금";
+      } else {
+        day = "토";
+      }
+      console.log(day);
+
+      // for loop문
+      let text = "";
+      for (let i = 0; i < 5; i++) {
+        console.log((text = "The number is " + i));
+      }
+
+      // for (let i = 0; i < 5; i++) {
+      //   text += "The number is " + i + "<br>";
+      // }
+      // console.log(text);
+
+      // sum을 10이 될때까지 1씩 증가
+      let sum = 0;
+      for (let i = 1; i <= 10; i++) {
+        sum = sum + 1;
+        console.log(sum);
+      }
+
+      // 구구단 2단 (for 사용)
+      let gugudan = 0;
+      for (let i = 1; i <= 9; i++) {
+        gugudan = 2 * i;
+        console.log("2 × " + i + " = " + gugudan);
+      }
+      // 구구단 전체 (for 사용)
+      for (let o = 2; o <= 9; o++) {
+        for (let p = 1; p <= 9; p++) {
+          console.log(o + "×" + p + "=" + o * p);
+        }
+      }
+
+      //반복문 : while
+      // condition에 true를 직접 넣어주면 무한 루프가 된다.
+      while (true) {
+        // 로그인 상황
+        // 입력 받은 아이디값과 DB에 저장된 아이디 목록 리스트 비교
+        // 입력 받은 pw와 DB에 저장된 pw 목록 리스트 비교
+
+        // id , pw가 올바른 값으로 입력될 때까지 무한 입력 받을 수 있음.
+
+        // 올바른 값이 입력되면 break 키워드를 사용해서 while 반복을 종료
+
+        if (inputId === dbId && inputPw === dbPw) {
+          break;
+        } else {
+        }
+      }
+    </script>
+  </head>
+  <body></body>
+</html>
