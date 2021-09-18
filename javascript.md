@@ -245,3 +245,15 @@ switch(expressions){
 > https://www.w3schools.com/js/js_loop_for.asp
 >
 > - 특정 횟수 만큼 반복 실행
+
+## 함수(Function)
+
+- 특정한 기능을 실행(독립적으로 실행)할 수 있는 여러 코드를 묶어 놓은 블럭.
+- 선언(declaration) : 함수 정의(definition)
+- 호출(call) : 함수를 실행
+
+## 배열, 객체, Class
+
+- 데이터, 함수의 집합(자바 스크립트는 함수도 값으로 사용.)
+
+### 배열(Array)

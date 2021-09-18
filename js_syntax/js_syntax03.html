@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script>
+      // 함수 선언
+      function myFunction() {
+        // 실행 코드
+        console.log("함수 선언");
+      }
+
+      // 함수 호출
+      myFunction();
+
+      // 함수 사용 예제
+      function print1() {
+        console.log("true function");
+      }
+
+      function print2() {
+        console.log("false function");
+      }
+
+      if (3 < 5) {
+        print1();
+      } else {
+        print2();
+      }
+
+      //함수 재사용
+      let a = 1;
+
+      function print3() {
+        let b = "비교식 참";
+        console.log(b);
+      }
+      // 아래 if문에서 동일하게 반복되는 코드를 함수 print3으로 만들어서
+      // 재사용.
+
+      if (a > 5) {
+        print3();
+      } else if (a > 4) {
+        print3();
+      } else if (a > 3) {
+        print3();
+      } else {
+        let b = "비교식 거짓";
+        console.log(b);
+      }
+
+      // 매개변수(파라미터)를 사용해서 재사용 시 값을 변경해가며 사용
+      // sum함수를 만든 3+5 호출 예제
+      function sum() {
+        console.log(3 + 5);
+      }
+
+      sum();
+
+      // 값을 변경해가며 사용 할 수 있는 sum1 함수 예제
+      function sum1(a, b) {
+        console.log(a + b);
+      }
+
+      sum1(2, 3);
+      sum1(4, 10);
+      sum1(1, 1);
+      sum1(2, 1);
+
+      //print3 함수를 매개변수를 사용해보기.
+
+      function print4(msg) {
+        b = msg;
+        console.log(msg);
+      }
+
+      if (a > 5) {
+        print4("비교식 참");
+      } else if (a > 4) {
+        print4("비교식 참");
+      } else if (a > 3) {
+        print4("비교식 참");
+      } else {
+        print4("비교식 거짓");
+      }
+
+      // return (return을 사용 시 값을 생성해줌 리턴이 함수에 값을 반환)
+      function sum2(a, b) {
+        let s = 0;
+        s = a + b;
+        return s;
+      }
+
+      let total = sum2(10, 10);
+      // let total = 20; 과 같음
+      console.log(total);
+      sum2(12, 3);
+      let e = console.log(15);
+    </script>
+  </head>
+  <body></body>
+</html>
