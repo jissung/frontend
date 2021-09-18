@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script>
+      // 객체
+      const car = {
+        //property
+        name: "Fiat",
+        weight: 800,
+        color: "white",
+        // method
+        start: function () {
+          return console.log("car 출발");
+        }
+      };
+
+      // firstName = "zzirung";
+      // lastName = "K";
+      const person = {
+        firstName: "jisung",
+        lastName: "Kang",
+        id: 5566,
+        fullName: function () {
+          return this.firstName + this.lastName;
+          //return firstName + lastName; this를 사용 하지 않으면 일반 변수가 됨(zzirungK 출력)
+        }
+      };
+
+      console.log(car.name);
+      console.log(person.lastName);
+      car.start();
+      console.log(person.fullName());
+
+      //객체 데이터 변경하기.
+      car.name = "BMW";
+
+      console.log(car.name);
+
+      console.log(car);
+      console.log(person);
+
+      // Date라는 함수안에 설계도를 new로 생성해서 day에 넣어준다.
+      let day = new Date();
+      const yesterDay = new Date(2021, 09, 17, 15, 44, 0);
+
+      console.log(day);
+      console.log(day.getFullYear());
+      console.log(yesterDay);
+    </script>
+  </head>
+  <body></body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script>
+      // Scope 활용 예제
+      // 변수 Scope의 원리 : 포함하고 있는 관계에서만 접근이 가능하다.
+      var a = "a"; // Global Scope
+
+      function print() {
+        var b = "b"; // Function Scope
+        for (let i = 0; i < 5; i++) {
+          // let = i =0; -> Block Scope
+          var c = "c"; // Block Scope
+
+          // console.log(a);
+          // console.log(b);
+          // console.log(c);
+          // console.log(d);
+          // d는 출력 안됨
+        } // for문
+        // console.log(a);
+        // console.log(b);
+        // console.log(c);
+        // console.log(d);
+        // c, d 출력 안됨
+      } // print()
+      // console.log(a);
+      // console.log(b);
+      // console.log(c);
+      // console.log(d);
+      // a만 출력
+
+      if (true) {
+        var d = "d"; // Block Scope
+        console.log(a);
+        // console.log(b);
+        // console.log(c);
+        console.log(d);
+        // d만 출력
+      }
+
+      print();
+    </script>
+  </head>
+  <body></body>
+</html>
