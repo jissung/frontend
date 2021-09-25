@@ -330,3 +330,139 @@ https://www.w3schools.com/js/js_events.asp
 > - key down(press), change
 >
 > focus
+>
+> 자동으로 발생되는 이벤트
+>
+> load
+
+### JS Event Handler/Listener
+
+```
+elementNode.addEventListener(이벤트, 함수);
+```
+
+> 함수를 따로 정의해서 매개변수로 넣어주는 경우 함수 이름만 넣어줌 (괄호 생략)
+>
+> 함수를 따로 정의하지 않고 익명함수로 직접 넣어주는 경우도 있음.
+
+### JS Form
+
+https://www.w3schools.com/html/html_form_input_types.asp
+https://www.w3schools.com/html/html_form_elements.asp
+
+> Form 요소는 서버 측에 데이터를 전달할 때 사용자의 입력을 받을 수 있는 요소
+
+```
+<input type="text" /> // text 입력할 수 있는 창
+<input type="password" />
+<input type="radio" />
+
+<select>
+  <option>HTML</option>
+  <option>CSS</option> // option 태그를 활용해서 항목 만들기
+</select>
+
+<button type="button">save</button> // 버튼 생성
+
+```
+
+> input 버튼과 button은 기능상의 차이는 없다.
+>
+> HTML 요소 구성의 차이
+>
+> - input은 빈 요소이고 button은 시작/종료 태그로 구성됨
+> - input 버튼은 컨텐츠 구성 시 value attribute를 사용해야 하기 때문에 제약이 있다.
+> - button은 컨텐츠 구성 시 제약이 없다.
+> - 시작/종료 태그로 된 가상 요소 이미지를 넣을 수 있음.
+> - 빈 요소에는 가상 요소를 사용 할 수 없다. ( 영역을 지정해 줄 수 없기 때문 )
+
+### JS 작성 방식
+
+> HTML, CSS와 Javascript가 같이 사용될 때 3가지가 제대로 적용되기 위한 작성
+>
+> - External : js파일을 따로 생성 (외부 파일)
+> - Internal : HTML 문서내 script태그를 사용해 코드를 작성 하는 방식.
+> - InLine : HTML Element에 javascript 코드를 직접 작성하는 경우.
+
+> External, Internal 방식으로 코딩하는 경우 Javascript의 로딩 시점은 HTML요소가 모두 로딩(랜더링)된 이후이어야 함.
+>
+> script 태그에 defer attribute를 사용하면 script 태그 위치에 상관없이 HTML이 모두 로딩된 이후에 코드를 실행 할 수 있다.
+> defer attirbute는 외부 파일을 불러올때만 적용이 가능하다.
+
+```
+ - External
+
+ <script src="function.js"></script>
+
+ - Internal
+
+<script>
+  console.log(123);
+</script>
+
+ - Inline
+ <button type="button" onclick="show();" >버튼</button>
+```
+
+### JS DOM
+
+https://www.w3schools.com/js/js_htmldom.asp
+
+> DOM : Document Object Model
+>
+> - HTML 요소들이 객체로 생성된 것.
+> - javascript에서 HTML 요소들을 제어하기 위해서 사용한다.
+
+### JS DOM Access
+
+```
+document.getElementById('id');
+document.getElementByTagName('tag');
+document.getElementByClassName('class');
+
+```
+
+> jQuery
+>
+> - javascript에서 만들어 놓은 라이브러리
+> - 장점 : DOM요소에 접근할때 심플하게 사용 가능하다.
+
+```
+$('#id')
+$('tag')
+$('.class')
+```
+
+> HTML5
+
+```
+document.querySlector('#id');
+document.querySlector('tag');
+document.querySlector('.class');
+
+document.querySlectorAll('.class');
+<!-- tag, class일때 사용 -->
+
+```
+
+### Create / Read / Update / Delete
+
+> Create
+
+```
+//HTML 요소 생성
+document.createElement()
+
+//Text 생성
+document.createTextNode()
+
+// 부모요소에 자식 요소를 추가
+parentNode.appendChild(childNode);
+
+// 해당요소에 클래스 이름 추가
+elementNode.classList.add()
+
+// input type text 요소의 값을 저장하고 있는 property
+inputNode.value
+
+```

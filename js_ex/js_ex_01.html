@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- defer attribute를 사용해 function.js 파일을 HTML 이후 랜더링 -->
+    <script src="function.js" defer></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 폼 요소 -->
+    <input type="button" value="버튼" />
+    <!-- value element 빈요소로 속성을 활용하기 때문에 텍스트만 입력 가능, 이미지는 활용 못하는 제약이 있다.  -->
+    <input type="image" src="/images/logo.png" alt="" />
+    <!-- input 태그에 image 타입으로 이미지를 넣을 수는 있으나 박스가 안 만들어짐.  -->
+    <button>버튼</button>
+    <!-- 버튼 태그는 시작/종료 태그라 이미지도 가능함. (제약이 없음) -->
+    <button type="button"><img src="/images/logo.png" alt="" /></button>
+
+    <br /><br />
+    <input type="text" class="text" value="텍스트" />
+    <br /><br />
+    <select id="colot">
+      <option value="red">red</option>
+      <option value="blue">bule</option>
+      <option value="white">white</option>
+    </select>
+
+    <!-- div태그의 내용을 js파일로 변경해보기 -->
+    <div class="element">요소 내용</div>
+
+    <script>
+      document.querySelector(".text").value = "변경된 텍스트";
+    </script>
+  </body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      .list {
+        border: 1px solid red;
+        width: 200px;
+        padding: 20px;
+        list-style: none;
+      }
+      .list-item {
+        border: 1px solid #ddd;
+        margin: 5px 0;
+        padding: 10px;
+      }
+      .text-create {
+        width: 200px;
+        height: 30px;
+        box-sizing: border-box;
+      }
+      .btn-create {
+        width: 100px;
+        height: 30px;
+      }
+      .list-item > span {
+        display: inline-block;
+        border: 1px solid #333;
+        padding: 5px;
+        margin-right: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>DOM Create, Read, Update, Delete (CRUD)</h1>
+
+    <div id="element01">HTML 요소1</div>
+    <p class="element01">HTML 요소2</p>
+    <div class="element02">HTML 요소3</div>
+
+    <div>HTML Sementic 요소 목록</div>
+    <ul class="list">
+      <li class="list-item"><span>1</span> header</li>
+      <li class="list-item"><span>2</span> footer</li>
+      <li class="list-item"><span>3</span> section</li>
+    </ul>
+
+    <div>
+      <input
+        type="text"
+        class="text-create"
+        placeholder="추가할 텍스트를 입력"
+      />
+      <button type="button" class="btn-create">요소 추가</button>
+    </div>
+
+    <br />
+    <!-- // 오른쪽에 읽어온 내용 표시 -->
+    <div>
+      <button type="button" class="btn-read">요소내용표시</button>
+      <span class="text-read"></span>
+    </div>
+    <br />
+    <div>
+      <input
+        type="text"
+        class="index-delete"
+        placeholder="삭제할 번호를 입력하시오"
+      />
+      <button type="button" class="btn-delete">요소 삭제</button>
+    </div>
+    <script>
+      // DOM Access/Find
+      console.log(document.querySelector("#element01"));
+      console.log(document.querySelector("p"));
+      console.log(document.querySelector(".element02"));
+
+      // console.log(document.querySelectorAll(".list-item"));
+
+      // DOM Create
+      const listItem = document.createElement("li");
+      // dom생성 시 let보단 const 사용 권장.
+      // const listText = document.createTextNode("article");
+      //text node 생성
+
+      //listItem, listText 합치기 (text를 li태그에 추가
+      listItem.appendChild(listText); //앞이 부모요소, 괄호 : 자식요소
+      // <li> article </li>
+
+      // <li>태그에 class 추가
+      listItem.classList.add("list-item");
+
+      const list = document.querySelector(".list");
+      // list class에 접근 후 list 변수에 담기.
+
+      list.appendChild(listItem);
+      // <li>태그를 <ul>태그에 추가
+
+      // 버튼을 클릭 시 li 요소 추가 이벤트
+      // Event , Event Handler(Listner)
+
+      //1. 이벤트가 발생되는 대상(HTML DOM) 찾기(Access)
+      const buttonCreate = document.querySelector(".btn-create");
+      //2. Event가 발생되는 DOM에 포함된 Event Listener 사용하기
+      let addNode = () => {
+        // DOM Create
+        const listItem = document.createElement("li");
+        // dom생성 시 let보단 const 사용 권장.
+        // const listText = document.createTextNode("article");
+        //text node 생성
+
+        const indexSpan = documnet.createElement("span");
+        // span 태그 만들기.
+        const listNumber = document.querySelectorAll("list-item").length;
+        // list-item 전체 갯수 읽어오기
+        const indexNumber = document.createTextNode(listNumber + 1);
+        indexSpan.appendChild(indexNumber);
+        listItem.appendChild(indexSpan);
+
+        // 사용자 입력값을 읽어와서 요소 생성하는 이벤트
+        const inputText = document.querySelector(".text-create");
+        const listText = document.createTextNode(inputText.value);
+
+        //listItem, listText 합치기 (text를 li태그에 추가)
+        listItem.appendChild(listText); //앞이 부모요소, 괄호 : 자식요소
+        // <li> article </li>
+
+        // <li>태그에 class 추가
+        listItem.classList.add("list-item");
+
+        const list = document.querySelector(".list");
+        // list class에 접근 후 list 변수에 담기.
+
+        list.appendChild(listItem);
+        // <li>태그를 <ul>태그에 추가
+      };
+      // 함수의 매개변수 값으로 함수를 넣어줄때 함수 이름만 넣어준다. (괄호 빼기)
+      buttonCreate.addEventListener("click", addNode);
+
+      const buttonRead = document.querySelector(".btn-read");
+      buttonRead.addEventListener("click", function () {
+        const listItemAll = document.querySelectorAll(".list-item");
+        const textRead = document.querySelector(".text-read");
+
+        let textValue = "";
+
+        for (let i = 0; i < listItemAll.length; i++) {
+          // const textNode = document.createTextNode(
+          //   listItemAll[i].innerHTML + " "
+          // );
+          // textRead.innerHTML = 'textNode';
+          // textRead.appendChild(textNode);
+          textValue = textValue + listItemAll[i].innerHTML + " ";
+        }
+        textRead.innerHTML = textValue;
+      });
+
+      //Delete
+      const buttonDlete = document.querySelector("btn-button");
+      buttonDelete.addEventListener("click", function () {
+        const indexDelete = documnet.querySelector("index-delete").value - 1;
+        const listParent = document.querySelector(".list");
+        const listItem = document.querySelecotrAll(".list-item");
+
+        listParent.removeChild(listItem[indexDelete]);
+      });
+    </script>
+  </body>
+</html>
