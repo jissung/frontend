@@ -355,3 +355,29 @@ div.name1 : div Element가 name1 class이름을 가지고 있는 경우
 .name1>name2 : class 이름이 name1인 요소의 자식 요소중 class이름이 .name2인 요소를 선택
 
 ```
+
+### CSS Position
+
+> 박스를 단독으로 좌표값을 이용해서 위치를 설정할 때 사용.
+>
+> - static
+> - relative
+> - absolute
+> - fixed
+
+> relative
+>
+> - 원래 위치의 자리를 그대로 유지하면서 원래 위치를 기준으로 좌표 이동을 할 수 있다.
+
+> absolute
+>
+> - 원래 위치의 자리를 유지하지 않고 부모를 기준으로 좌표 이동을 할 수 있다.
+> - 기본 : body를 기준
+> - 부모 요소의 position 속성을 적용한 경우 : 인접한 부모요소를 기준
+
+> fixed
+>
+> - absolute와 유사하다.
+> - 위치 기준이 브라우저가 된다.
+> - 스크롤 이동시에도 표시 됨.
+> - sticky와 유사하지만 fixed는 지정된 브라우저 위치에 계속 붙어있는 반면, sticky는 기준점이 지나면

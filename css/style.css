@@ -159,6 +159,10 @@ table {
 .gnb-link:hover {
   color: #10c9c3;
 }
+
+.hambuger {
+  display: none;
+}
 .section01 {
   min-width: 1360px;
   height: 320px;
@@ -261,6 +265,17 @@ table {
 
 /* smart phone */
 @media screen and (max-width: 767px) {
+  .header {
+    height: 50px;
+    padding: 12px 20px 0;
+  }
+
+  /* 메뉴 덮는 형태*/
+  .gnb {
+    position: absolute;
+  }
+  /* hambuger button 추가*/
+
   .section01 {
     padding-top: 80;
   }

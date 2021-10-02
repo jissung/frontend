@@ -144,24 +144,15 @@ table {
 .nav-menu-btn {
   border: none;
   font-family: "Roboto", sans-serif;
-  font-size: 20px;
+  font-size: 17px;
   font-weight: 600;
   background-color: white;
 }
 .container {
   display: flex;
   flex-direction: row;
-  margin: 115px 0px 0px 115px;
 }
-.section-left {
-  width: 70px;
-}
-.section-center {
-  width: 800px;
-  height: 500px;
-}
-.section-right {
-  width: 70px;
+.section01 {
 }
 .con-figure {
   width: 760px;

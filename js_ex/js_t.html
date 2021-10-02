@@ -26,22 +26,38 @@
         width: 100px;
         height: 30px;
       }
+
       .list-item > span {
         display: inline-block;
-        border: 1px solid #333;
+        border: 1px solid #999;
         padding: 5px;
         margin-right: 10px;
+      }
+      .text-read {
+        display: inline-block;
+        border: 1px solid #000;
+        padding: 10px;
+      }
+      .text-read .list-index {
+        display: inline-block;
+        border: 1px solid #000;
+        padding: 5px;
+      }
+      .text-read .list-text {
+        display: inline-block;
+        border: 1px solid #000;
+        padding: 5px;
       }
     </style>
   </head>
   <body>
-    <h1>DOM Create, Read, Update, Delete (CRUD)</h1>
+    <h1>DOM Create, Read, Update, Delete(CRUD)</h1>
 
     <div id="element01">HTML 요소1</div>
     <p class="element01">HTML 요소2</p>
     <div class="element02">HTML 요소3</div>
 
-    <div>HTML Sementic 요소 목록</div>
+    <div>HTML Semantic 요소 목록</div>
     <ul class="list">
       <li class="list-item">
         <span class="list-index">1</span><span class="list-text">header</span>
@@ -53,18 +69,15 @@
         <span class="list-index">3</span><span class="list-text">section</span>
       </li>
     </ul>
-
     <div>
       <input
         type="text"
         class="text-create"
-        placeholder="추가할 텍스트를 입력"
+        placeholder="추가할 텍스트를 입력해주세요."
       />
-      <button type="button" class="btn-create">요소 추가</button>
+      <button type="button" class="btn-create">요소추가</button>
     </div>
-
     <br />
-    <!-- // 오른쪽에 읽어온 내용 표시 -->
     <div>
       <button type="button" class="btn-read">요소내용표시</button>
       <span class="text-read"></span>
@@ -75,25 +88,27 @@
       <input
         type="text"
         class="index-update"
-        placeholder="수정할 번호를 입력하시오"
+        placeholder="수정할 번호를 입력해주세요."
       />
       <input
         type="text"
         class="text-update"
-        placeholder="수정할 텍스트를 입력하시오"
+        placeholder="수정할 텍스트를 입력해주세요."
       />
-      <button type="button" class="btn-update">요소 수정</button>
+      <button type="button" class="btn-update">요소수정</button>
     </div>
+
     <br />
 
     <div>
       <input
         type="text"
         class="index-delete"
-        placeholder="삭제할 번호를 입력하시오"
+        placeholder="삭제할 번호를 입력해주세요."
       />
-      <button type="button" class="btn-delete">요소 삭제</button>
+      <button type="button" class="btn-delete">요소삭제</button>
     </div>
+
     <script>
       // DOM Access/Find
       console.log(document.querySelector("#element01"));
@@ -102,129 +117,91 @@
 
       console.log(document.querySelectorAll(".list-item"));
 
-      // DOM Create
-      const listItem = document.createElement("li");
-      // dom생성 시 let보단 const 사용 권장.
-      //const listText = document.createTextNode("");
-      //text node 생성
+      // Event , Event Handler/Listener
 
-      //listItem, listText 합치기 (text를 li태그에 추가
-      listItem.appendChild(listText);
-      //앞이 부모요소, 괄호 : 자식요소
-      // <li> article </li>
-
-      // <li>태그에 class 추가
-      listItem.classList.add(".list-item");
-
-      const list = document.querySelector(".list");
-      // list class에 접근 후 list 변수에 담기.
-
-      list.appendChild(listItem);
-      // <li>태그를 <ul>태그에 추가
-
-      // 버튼을 클릭 시 li 요소 추가 이벤트
-      // Event , Event Handler(Listner)
-
-      //1. 이벤트가 발생되는 대상(HTML DOM) 찾기(Access)
+      // 1. Event가 발생되는 대상(HTML DOM) 찾기(Access)
       const buttonCreate = document.querySelector(".btn-create");
 
-      //2. Event가 발생되는 DOM에 포함된 Event Listener 사용하기
+      // 2. Event가 발생되는 DOM에 포함된 Event Listener 사용하기
       // Create
       let addNode = () => {
+        // DOM Create
         const listItem = document.createElement("li");
-        // dom생성 시 let보단 const 사용 권장.
-        // const listText = document.createTextNode("article");
-        //text node 생성
 
         const indexSpan = document.createElement("span");
-        // span 태그 만들기.
+
         const listNumber = document.querySelectorAll(".list-item").length;
-        // list-item 전체 갯수 읽어오기
         const indexNumber = document.createTextNode(listNumber + 1);
 
         indexSpan.appendChild(indexNumber);
-
+        indexSpan.classList.add("list-index");
         listItem.appendChild(indexSpan);
 
-        // 사용자 입력값을 읽어와서 요소 생성하는 이벤트
+        // const listText = document.createTextNode("article");
         const inputText = document.querySelector(".text-create");
         const listText = document.createTextNode(inputText.value);
-        // element 만듬
+
         const textSpan = document.createElement("span");
 
         textSpan.appendChild(listText);
+        textSpan.classList.add("list-text");
         listItem.appendChild(textSpan);
 
-        //listItem, listText 합치기 (text를 li태그에 추가)
-        listItem.appendChild(listText); //앞이 부모요소, 괄호 : 자식요소
-        // <li> article </li>
-
-        // <li>태그에 class 추가
         listItem.classList.add("list-item");
 
         const list = document.querySelector(".list");
-        // list class에 접근 후 list 변수에 담기.
-
         list.appendChild(listItem);
-        // <li>태그를 <ul>태그에 추가
       };
-      // 함수의 매개변수 값으로 함수를 넣어줄때 함수 이름만 넣어준다. (괄호 빼기)
+      // 함수의 매개변수 값으로 함수를 넣어줄 때 함수 이름만 넣어줌(괄호 생략)
       buttonCreate.addEventListener("click", addNode);
 
-      //Read
+      // Read
       const buttonRead = document.querySelector(".btn-read");
       buttonRead.addEventListener("click", function () {
         const listItemAll = document.querySelectorAll(".list-item");
         const textRead = document.querySelector(".text-read");
-
         let textValue = "";
 
         for (let i = 0; i < listItemAll.length; i++) {
-          // const textNode = document.createTextNode(
-          //   listItemAll[i].innerHTML + " "
-          // );
-          // textRead.innerHTML = 'textNode';
-          // textRead.appendChild(textNode);
-          // appendChild : 뒤에 추가, innerHTML : 덮어쓰기
+          /*
+          const textNode = document.createTextNode(
+            listItemAll[i].innerHTML + " "
+          );
+          textRead.appendChild(textNode);
+          */
 
           textValue = textValue + listItemAll[i].innerHTML + " ";
         }
         textRead.innerHTML = textValue;
       });
 
-      //Update
-      // dom 찾기
+      // Update
       const buttonUpdate = document.querySelector(".btn-update");
-
-      //index number 찾기
       buttonUpdate.addEventListener("click", function () {
-        //수정할 번호 값 갖고 오기
         const indexUpdate = document.querySelector(".index-update").value - 1;
-        //텍스트 읽어오기
         const textUpdate = document.querySelector(".text-update").value;
 
-        //변수 scope이론(아래 delete와 상관없이 사용가능), list, list-item 읽어오기
         const listParent = document.querySelector(".list");
         const listItem = document.querySelectorAll(".list-item");
 
-        //innerHTML 사용해서 덮어쓰기 (인덱스,텍스트 통째로 바뀜)
-        //listItem[indexUpdate].innerHTML = textUpdate;
-
-        //querySelector이용해 인덱스, 텍스트 각각 바꾸기
-        // list-text를 찾아서 내용만 innerHTML 덮어쓰기
         listItem[indexUpdate].querySelector(
           ".list-text"
         ).innerHTML = textUpdate;
       });
 
-      //Delete
+      // Delete
       const buttonDelete = document.querySelector(".btn-delete");
       buttonDelete.addEventListener("click", function () {
         const indexDelete = document.querySelector(".index-delete").value - 1;
         const listParent = document.querySelector(".list");
-        const listItem = document.querySelectorAll(".list-item");
+        let listItem = document.querySelectorAll(".list-item");
 
         listParent.removeChild(listItem[indexDelete]);
+
+        listItem = document.querySelectorAll(".list-item");
+        for (let i = 0; i < listItem.length; i++) {
+          listItem[i].querySelector(".list-index").innerHTML = i + 1;
+        }
       });
     </script>
   </body>
