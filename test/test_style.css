@@ -162,3 +162,10 @@ table {
   width: 750px;
   height: 400px;
 }
+
+/* tablet */
+@media screen and (max-width: 1024px) {
+}
+/* smart phone */
+@media screen and (max-width: 767px) {
+}

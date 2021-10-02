@@ -160,7 +160,8 @@ table {
   color: #10c9c3;
 }
 
-.hambuger {
+.hambuger,
+.close {
   display: none;
 }
 .section01 {
@@ -169,7 +170,21 @@ table {
   background: #f6f6f6;
   padding-top: 100px;
   box-sizing: border-box;
+  position: relative;
 }
+.slide {
+  position: absolute;
+  width: 100%;
+  top: 100px;
+  left: 0;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
 .section-heading {
   text-align: center;
   font-family: "Montserrat", sans-serif;
@@ -266,18 +281,91 @@ table {
 /* smart phone */
 @media screen and (max-width: 767px) {
   .header {
+    width: 100%;
     height: 50px;
     padding: 12px 20px 0;
+    position: fixed;
+    top: 0;
+    background: #fff;
   }
 
   /* 메뉴 덮는 형태*/
+  .logo {
+    position: relative;
+    z-index: 990;
+  }
+
   .gnb {
-    position: absolute;
+    /* display: none; */
+    opacity: 0;
+    /* 투명도 사용하기 */
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    /* position:absolute, fixed를 지정해주면 자식요소 기준인 height도 부모요소 기준으로 변경됨
+    width 부모요소 기준으로 자동으로 채워지는 속성이 제거 된다. */
+    height: 100%;
+    background: #ddd;
+    z-index: 900;
+    transition: all 1s;
+    /* 애니메이션 만들때 사용 */
+    /* transition -> all 애니이션 전체 적용, 1s(1초) */
+  }
+  .gnb.on {
+    /* display: block; */
+    opacity: 1;
+    left: 0;
+  }
+
+  .gnb-list {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 160px;
+  }
+
+  .gnb-item {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+
+  .gnb-link {
+    font-size: 45px;
   }
   /* hambuger button 추가*/
+  .hambuger {
+    display: block;
+    width: 25px;
+    height: 25px;
+    padding: 0;
+    border: none;
+    background: none;
+  }
+  .hambuger img {
+    width: 100%;
+    height: 100%;
+  }
+  .close {
+    display: none;
+    width: 25px;
+    height: 25px;
+    padding: 5px;
+    border: none;
+    background: none;
+    z-index: 990;
+  }
+
+  .close.on {
+    display: block;
+  }
+  .close img {
+    width: 100%;
+    height: 100%;
+  }
 
   .section01 {
     padding-top: 80;
+    margin-top: 50px;
   }
   .section-heading {
     font-size: 20px;

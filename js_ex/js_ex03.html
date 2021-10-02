@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <select class="year">
+      <option value="2021">2021</option>
+      <option value="2020">2020</option>
+      <option value="2019">2019</option>
+    </select>
+    <select class="month">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+    </select>
+    <select class="day">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+    </select>
+    <button type="button" class="date_btn">선택한 날짜 출력</button>
+    <div class="date"></div>
+    <script>
+      const year = document.querySelector(".year");
+      const month = document.querySelector(".month");
+      const day = document.querySelector(".day");
+      const date = document.querySelector(".date");
+      const dateButton = document.querySelector(".date_btn");
+
+      dateButton.addEventListener("click", function () {
+        let dateValue = year.value + "-" + month.value + "-" + day.value;
+        date.innerHTML = dateValue;
+      });
+    </script>
+  </body>
+</html>
